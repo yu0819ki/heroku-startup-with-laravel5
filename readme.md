@@ -1,23 +1,41 @@
-## Laravel PHP Framework
+heroku-startup-with-laravel5
+========================
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/downloads.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+HerokuでLaravel5するアレ
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+## 使い方
+cloneしてHerokuに突っ込んで下さい。以下、その手順です。
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+## 手順
+1. `$ heroku login`
 
-## Official Documentation
+  Herokuにログイン
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+2. `$ heroku apps:create l5-yourapp -b https://github.com/heroku/heroku-buildpack-php`
 
-## Contributing
+  Heroku上にアプリケーションを作成。PHPを動かすためにbuildpackを指定。
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+3. `$ git clone git://github.com/yu0819ki/heroku-startup-with-laravel5.git`
 
-### License
+  必要なファイルをまとめておきました！どうぞ持って行って下さいましー
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+4. `$ cd heroku-startup-with-laravel5`
+
+  cloneしたディレクトリに移動
+
+5. `$ git remote add heroku https://git.heroku.com/l5-yourapp.git`
+
+  リモートリポジトリとしてherokuを登録
+
+6. `$ git push heroku master`
+
+  いつものデプロイ！welcome to l5！
+
+
+これで、あなたのHerokuでLaravel5する準備ができました！存分にかわいがってあげて下さいXD
+
+
+### 【関連URL】
+* [HerokuでNodeするアレ](https://github.com/yu0819ki/heroku-startup-with-node)
+* [HerokuでkoaなNodeするアレ](https://github.com/yu0819ki/heroku-startup-with-koa)
+* [HerokuでkoaなNodeするアレだったんだけど、せっかくだからiojsに乗り換えて動かしてみた](https://github.com/yu0819ki/heroku-startup-with-koa-on-iojs)
